@@ -10,4 +10,7 @@ bundle install --path vendor/bundle
 
 bundle exec rails new . --skip-action-cable --api -d mysql
 
+## credit
+
+https://github.com/reactjs/redux
 
