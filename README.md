@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## log
 
-Things you may want to cover:
+bundle init
 
-* Ruby version
+echo "gem 'rails', '5.0.0.beta4', github: 'rails/rails'" >> Gemfile
 
-* System dependencies
+bundle install --path vendor/bundle
 
-* Configuration
+bundle exec rails new . --skip-action-cable --api -d mysql
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
