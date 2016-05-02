@@ -25,5 +25,5 @@ config/secrets.yml
 
 npm-debug.log
 node_modules
-
+public/bundle.js
 
