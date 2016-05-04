@@ -15,7 +15,6 @@ export default function Navi({ children }) {
             <li>
               <Link to="/test">Test</Link>
             </li>
-            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
