@@ -18,7 +18,7 @@ export default function Navi({ children }) {
           </ul>
         </div>
       </nav>
-      <div style={{ marginTop: '3em' }}>{children}</div>
+      <div style={{ marginTop: '5em' }}>{children}</div>
     </div>
   )
 }
