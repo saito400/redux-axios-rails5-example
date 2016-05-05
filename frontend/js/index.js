@@ -4,10 +4,10 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
-import App from './components/App'
 import Home from './components/Home'
 import Navi from './components/Navi'
 import Test from './components/Test'
+import TodoMain from './components/TodoMain'
 
 import reducers from './reducers'
 
@@ -30,6 +30,7 @@ ReactDOM.render(
         <IndexRoute component={Home}/>
         <Route path="/" component={Home}/>
         <Route path="test" component={Test}/>
+        <Route path="todo" component={TodoMain}/>
       </Route>
     </Router>
   </Provider>,

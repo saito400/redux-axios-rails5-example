@@ -15,6 +15,9 @@ export default function Navi({ children }) {
             <li>
               <Link to="/test">Test</Link>
             </li>
+            <li>
+              <Link to="/todo">Todo</Link>
+            </li>
           </ul>
         </div>
       </nav>
