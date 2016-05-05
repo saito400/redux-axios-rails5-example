@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { increase, decrease } from '../actions/count'
+import { increase, decrease } from '../actions/index'
 
 function Home({ number, increase, decrease }) {
   return (
