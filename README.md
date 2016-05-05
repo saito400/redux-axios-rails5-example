@@ -1,4 +1,4 @@
-# WIP
+# WIP / Demo application using Rails5(API),Redux,Bootstrap
 
 ## log
 
@@ -10,7 +10,7 @@ bundle install --path vendor/bundle
 
 bundle exec rails new . --skip-action-cable --api -d mysql
 
-## credit
+# credit
 
 https://github.com/reactjs/redux
 
