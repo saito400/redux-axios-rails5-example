@@ -1,15 +1,19 @@
-import { INCREASE, DECREASE } from '../constants'
+import * as types from '../constants'
+
+export function addTodo(text) {
+  return { type: types.ADD_TODO, text }
+}
 
 export function increase(n) {
   return {
-    type: INCREASE,
+    type: types.INCREASE,
     amount: n
   }
 }
 
 export function decrease(n) {
   return {
-    type: DECREASE,
+    type: types.DECREASE,
     amount: n
   }
 }
