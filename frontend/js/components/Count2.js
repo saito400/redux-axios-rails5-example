@@ -14,7 +14,7 @@ function Count2({ number, increase2, decrease2 }) {
 }
 
 export default connect(
-  state => ({ number: state.count.number2 }),
+  state => ({ number: state.count2.number }),
   { increase2, decrease2 }
 )(Count2)
 
