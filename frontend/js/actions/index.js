@@ -7,6 +7,12 @@ export function addTodo(text) {
   }
 }
 
+export function getTodos() {
+  return {
+    type: types.GET_TODOS
+  }
+}
+
 export function increase(n) {
   return {
     type: types.INCREASE,
