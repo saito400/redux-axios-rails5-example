@@ -35,10 +35,10 @@ ReactDOM.render(
       <Router history={history}>
         <Route path="/" component={Navi}>
           <IndexRoute component={Home}/>
-          <Route path="count" component={Count}/>
-          <Route path="count2" component={Count2}/>
-          <Route path="test" component={Test}/>
-          <Route path="todo" component={Todo}/>
+          <Route path="/count" component={Count}/>
+          <Route path="/count2" component={Count2}/>
+          <Route path="/test" component={Test}/>
+          <Route path="/todo" component={Todo}/>
         </Route>
       </Router>
       <DevTools />
