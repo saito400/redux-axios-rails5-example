@@ -4,13 +4,18 @@ import DockMonitor from 'redux-devtools-dock-monitor'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 import * as reducers from './reducers'
 import { Navi, Count, Count2, Home, Test, Todo } from './components'
+
+import {fetchData} from './actions/index'
+
+import thunk from 'redux-thunk'
+
 
 const reducer = combineReducers({
   ...reducers,
@@ -23,11 +28,21 @@ const DevTools = createDevTools(
   </DockMonitor>
 )
 
-const store = createStore(
-  reducer,
+const enhancer = compose(
+  applyMiddleware(thunk),
   DevTools.instrument()
 )
+
+const store = createStore(
+  reducer,
+  enhancer
+)
+
 const history = syncHistoryWithStore(browserHistory, store)
+
+function loadData() {
+  store.dispatch(fetchData('http://localhost:3000/todos.json'))
+}
 
 ReactDOM.render(
   <Provider store={store}>
@@ -38,7 +53,7 @@ ReactDOM.render(
           <Route path="/count" component={Count}/>
           <Route path="/count2" component={Count2}/>
           <Route path="/test" component={Test}/>
-          <Route path="/todo" component={Todo}/>
+          <Route path="/todo" component={Todo} onEnter={loadData} />
         </Route>
       </Router>
       <DevTools />
