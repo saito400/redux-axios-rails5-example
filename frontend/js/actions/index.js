@@ -23,7 +23,6 @@ export function addTodo(text) {
       })
       .catch(function(response){
         dispatch(receiveError(response.data));
-//        dispatch(pushState(null,'/error'));
       })
   }
 }
@@ -96,7 +95,6 @@ export function fetchData(url) {
       })
       .catch(function(response){
         dispatch(receiveError(response.data));
-        dispatch(pushState(null,'/error'));
       })
   }
 }
