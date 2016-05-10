@@ -25,11 +25,12 @@ export default function todos(state = initialState, action) {
         ...state
       ]
       case types.RECV_ERROR:
-        return state.concat({text: 'RECV_ERROR', id: 100, completed: false})
+        //TODO do something
+        return state
       case types.RECV_DATA:
         return state.concat({text: 'RECV_DATA', id: 110, completed: false})
       case types.REQ_DATA:
-        return state.concat({text: 'REQ_DATA', id: 120, completed: false})
+        return state
     default:
       return state
   }
