@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509025329) do
+ActiveRecord::Schema.define(version: 20160509031021) do
 
   create_table "todos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "content"
+    t.string   "text"
+    t.boolean  "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
