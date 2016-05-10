@@ -1,16 +1,16 @@
 import * as types from '../constants'
 
 const initialState = [
-  {
-    text: 'Use Redux',
-    completed: false,
-    id: 9998
-  },
-  {
-    text: 'Use Redux2',
-    completed: false,
-    id: 9999
-  }
+//  {
+//    text: 'Use Redux',
+//    completed: false,
+//    id: 9998
+//  },
+//  {
+//    text: 'Use Redux2',
+//    completed: false,
+//    id: 9999
+//  }
 ]
 
 export default function todos(state = initialState, action) {
