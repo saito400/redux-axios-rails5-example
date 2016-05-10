@@ -1,7 +1,14 @@
 # WIP / Demo application using Rails5(API),Redux,Bootstrap,axios,react-router-redux
 
-# TODO how to build and launch application
+# How to build and launch application
 
+git clone https://github.com/saito400/redux-axios-react-router-redux-rails5-example.git
+
+npm install
+
+webpack
+
+TODO launch Rails
 
 ## log
 
