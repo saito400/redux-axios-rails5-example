@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import * as TodoActions from '../actions'
 import TodoInput from './TodoInput'
 
-class Todo extends Component {
+class TodoMain extends Component {
   constructor(props){
     super(props);
   }
@@ -38,4 +38,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Todo)
+)(TodoMain)
