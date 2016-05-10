@@ -1,4 +1,4 @@
-import { ADD_TODO } from '../constants'
+import * as types from '../constants'
 
 const initialState = [
   {
@@ -15,7 +15,7 @@ const initialState = [
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
-    case ADD_TODO:
+    case types.ADD_TODO:
       return [
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
@@ -24,7 +24,12 @@ export default function todos(state = initialState, action) {
         },
         ...state
       ]
-
+      case types.RECV_ERROR:
+        return state.concat({text: 'RECV_ERROR', id: 100, completed: false})
+      case types.RECV_DATA:
+        return state.concat({text: 'RECV_DATA', id: 110, completed: false})
+      case types.REQ_DATA:
+        return state.concat({text: 'REQ_DATA', id: 120, completed: false})
     default:
       return state
   }

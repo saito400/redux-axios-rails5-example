@@ -9,10 +9,6 @@ class Todo extends Component {
     super(props);
   }
 
-  componentWillMount() {
-    console.debug("TODO")
-  }
-
   render() {
     const { todos, actions } = this.props
     return (
