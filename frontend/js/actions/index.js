@@ -1,10 +1,30 @@
 import * as types from '../constants'
 import axios from 'axios';
 
-export function addTodo(text) {
+function addTodoAction(text) {
   return {
     type: types.ADD_TODO,
     text: text
+  }
+}
+
+export function addTodo(text) {
+  return function(dispatch) {
+    return axios({
+      url: 'http://localhost:3000/todos.json',
+      method: 'post',
+      data: {
+        text: text,
+        completed: false
+      }
+    })
+      .then(function(response) {
+        dispatch(addTodoAction(text));
+      })
+      .catch(function(response){
+        dispatch(receiveError(response.data));
+//        dispatch(pushState(null,'/error'));
+      })
   }
 }
 
