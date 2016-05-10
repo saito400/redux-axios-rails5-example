@@ -6,7 +6,7 @@ git clone https://github.com/saito400/redux-axios-react-router-redux-rails5-exam
 
 npm install
 
-webpack
+npm run build
 
 TODO launch Rails
 
