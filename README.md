@@ -1,4 +1,7 @@
-# WIP / Demo application using Rails5(API),Redux,Bootstrap
+# WIP / Demo application using Rails5(API),Redux,Bootstrap,axios,react-router-redux
+
+# TODO how to build and launch application
+
 
 ## log
 
