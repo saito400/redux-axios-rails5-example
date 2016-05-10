@@ -28,7 +28,7 @@ export default function todos(state = initialState, action) {
         //TODO do something
         return state
       case types.RECV_DATA:
-        return state.concat(action.data)
+        return action.data
       case types.REQ_DATA:
         return state
     default:
