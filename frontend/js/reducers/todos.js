@@ -4,12 +4,12 @@ const initialState = [
   {
     text: 'Use Redux',
     completed: false,
-    id: 0
+    id: 9998
   },
   {
     text: 'Use Redux2',
     completed: false,
-    id: 1
+    id: 9999
   }
 ]
 
@@ -28,7 +28,7 @@ export default function todos(state = initialState, action) {
         //TODO do something
         return state
       case types.RECV_DATA:
-        return state.concat({text: 'RECV_DATA', id: 110, completed: false})
+        return state.concat(action.data)
       case types.REQ_DATA:
         return state
     default:
