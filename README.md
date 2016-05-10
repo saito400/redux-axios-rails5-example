@@ -8,7 +8,15 @@ npm install
 
 npm run build
 
-TODO launch Rails
+bundle install --path vendor/bundle
+
+bundle exec rails db:create
+
+bundle exec rails db:migrate
+
+bundle exec rails server
+
+access http://localhost:3000/
 
 ## log
 
