@@ -17,7 +17,7 @@ class TodoMain extends Component {
         <h2>Todo test</h2>
         <TodoInput func={actions.addTodo} />
         {todos.map(todo =>
-          <Todo key={todo.id} text={todo.text} todoid={todo.id} />
+          <Todo key={todo.id} text={todo.text} todoid={todo.id} completed={todo.completed} />
         )}
       </div>
     )
