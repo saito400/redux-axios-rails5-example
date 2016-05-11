@@ -1,13 +1,6 @@
 import * as types from '../constants'
 import axios from 'axios';
 
-function addTodoAction(text) {
-  return {
-    type: types.ADD_TODO,
-    text: text
-  }
-}
-
 export function addTodo(text) {
   return function(dispatch) {
     return axios({
@@ -19,7 +12,7 @@ export function addTodo(text) {
       }
     })
       .then(function(response) {
-        dispatch(addTodoAction(text));
+        dispatch(fetchData('http://localhost:3000/todos.json'))
       })
       .catch(function(response){
         dispatch(receiveError(response.data));
