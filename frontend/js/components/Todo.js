@@ -9,11 +9,15 @@ class Todo extends Component {
 
   handle() {
     console.debug('handle ' + this.props.todoid)
+    console.debug('handle ' + this.props.completed)
   }
 
   render() {
+
+    const s = (this.props.completed) ? {textDecoration: 'line-through'} : {textDecoration: 'none'}
+
     return (
-      <div onClick={this.handle}>{this.props.text}</div>
+      <div onClick={this.handle}  style={s}>{this.props.text}</div>
     )
   }
 }
