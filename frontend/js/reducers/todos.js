@@ -19,8 +19,10 @@ export default function todos(state = initialState, action) {
       //TODO do something
       return state
     case types.RECV_DATA:
+      //TODO hide loading message
       return action.data
     case types.REQ_DATA:
+      //TODO display loading message
       return state
     default:
       return state
