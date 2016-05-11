@@ -8,8 +8,7 @@ class Todo extends Component {
   }
 
   handle() {
-    console.debug('handle ' + this.props.todoid)
-    console.debug('handle ' + this.props.completed)
+    this.props.toggle(this.props.todoid, (this.props.completed) ? false : true)
   }
 
   render() {

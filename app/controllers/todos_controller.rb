@@ -12,6 +12,11 @@ class TodosController < ApplicationController
 
   end
 
+  def update
+    @todo = Todo.find(params[:id])
+    @todo.update(todo_attributes)
+  end
+
 private
   def todo_attributes
     params.permit(:text, :completed)

@@ -27,6 +27,25 @@ export function addTodo(text) {
   }
 }
 
+export function todoStatusChange(id, completed) {
+  return function(dispatch) {
+    return axios({
+      url: 'http://localhost:3000/todos/' + id + '.json',
+      method: 'patch',
+      data: {
+        id: id,
+        completed: completed
+      }
+    })
+      .then(function(response) {
+        dispatch(fetchData('http://localhost:3000/todos.json'))
+      })
+      .catch(function(response){
+        dispatch(receiveError(response.data));
+      })
+  }
+}
+
 export function getTodos() {
   return {
     type: types.GET_TODOS
