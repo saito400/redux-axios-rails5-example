@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as TodoActions from '../actions'
 import TodoInput from './TodoInput'
+import Todo from './Todo'
 
 class TodoMain extends Component {
   constructor(props){
@@ -16,7 +17,7 @@ class TodoMain extends Component {
         <h2>Todo test</h2>
         <TodoInput func={actions.addTodo} />
         {todos.map(todo =>
-          <div key={todo.id}>{todo.text}</div>
+          <Todo key={todo.id} text={todo.text} todoid={todo.id} />
         )}
       </div>
     )
