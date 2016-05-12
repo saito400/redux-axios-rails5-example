@@ -10,7 +10,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 import * as reducers from './reducers'
-import { Navi, Count, Count2, Home, Test, TodoMain } from './components'
+import { Navi, Count, Home, Test, TodoMain } from './components'
 
 import {fetchData} from './actions/index'
 
@@ -51,7 +51,6 @@ ReactDOM.render(
         <Route path="/" component={Navi}>
           <IndexRoute component={Home}/>
           <Route path="/count" component={Count}/>
-          <Route path="/count2" component={Count2}/>
           <Route path="/test" component={Test}/>
           <Route path="/todo" component={TodoMain} onEnter={loadData} />
         </Route>
