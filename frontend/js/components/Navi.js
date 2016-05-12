@@ -21,9 +21,6 @@ class Navi extends Component {
                 <Link to="/count">Count</Link>
               </li>
               <li>
-                <Link to="/count2">Count2</Link>
-              </li>
-              <li>
                 <Link to="/test">Test</Link>
               </li>
               <li>
