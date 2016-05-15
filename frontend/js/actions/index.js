@@ -59,20 +59,6 @@ export function decrease(n) {
   }
 }
 
-export function increase2(n) {
-  return {
-    type: types.INCREASE2,
-    amount: n
-  }
-}
-
-export function decrease2(n) {
-  return {
-    type: types.DECREASE2,
-    amount: n
-  }
-}
-
 function requestData() {
   return {
     type: types.REQ_DATA
