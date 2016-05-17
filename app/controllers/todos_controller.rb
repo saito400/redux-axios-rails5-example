@@ -1,7 +1,8 @@
 class TodosController < ApplicationController
   def index
 
-    @todos = Todo.all
+    @q = Todo.ransack(params[:q])
+    @todos = @q.result(distinct: true)
     render json: @todos
 
   end
