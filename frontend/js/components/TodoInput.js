@@ -13,13 +13,17 @@ class TodoInput extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          id="todotext"
-          type="text" />
-          <button onClick={this.handle}>
-            Add Todo
-          </button>
+      <div className='form-inline'>
+        <div className='form-group'>
+          <input
+            className='form-control'
+            id="todotext"
+            placeholder="Todo"
+            type="text" />
+        </div>
+        <button onClick={this.handle} className='btn btn-default'>
+          Add Todo
+        </button>
       </div>
     )
   }
