@@ -41,7 +41,7 @@ const store = createStore(
 const history = syncHistoryWithStore(browserHistory, store)
 
 function loadData() {
-  store.dispatch(fetchData('http://localhost:3000/todos.json'))
+  store.dispatch(fetchData('/todos.json'))
 }
 
 ReactDOM.render(
