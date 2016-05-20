@@ -19,6 +19,24 @@ export function fetchData(url) {
   }
 }
 
+export function searchTodo(text) {
+  return function(dispatch) {
+    dispatch(requestData());
+
+    return axios.get('/todos.json', {
+      params: {
+        'q[text_cont]': text
+      }
+    })
+      .then(function(response) {
+        dispatch(receiveData(response.data));
+      })
+      .catch(function(response){
+        dispatch(receiveError(response.data));
+      })
+  }
+}
+
 export function addTodo(text) {
   return function(dispatch) {
     return axios({
