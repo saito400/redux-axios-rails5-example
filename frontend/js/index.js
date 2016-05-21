@@ -12,7 +12,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import * as reducers from './reducers'
 import { Navi, Count, Home, TodoMain } from './components'
 
-import {fetchData} from './actions/index'
+import {searchData} from './actions/index'
 
 import thunk from 'redux-thunk'
 
@@ -41,7 +41,7 @@ const store = createStore(
 const history = syncHistoryWithStore(browserHistory, store)
 
 function loadData() {
-  store.dispatch(fetchData('/todos.json'))
+  store.dispatch(searchData('/todos.json'))
 }
 
 ReactDOM.render(

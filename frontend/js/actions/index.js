@@ -1,24 +1,6 @@
 import * as types from '../constants'
 import axios from 'axios';
 
-export function fetchData(url) {
-  return function(dispatch) {
-    dispatch(requestData());
-    return axios({
-      url: url,
-      timeout: 20000,
-      method: 'get',
-      responseType: 'json'
-    })
-      .then(function(response) {
-        dispatch(receiveData(response.data));
-      })
-      .catch(function(response){
-        dispatch(receiveError(response.data));
-      })
-  }
-}
-
 export function searchTodo(text) {
   return function(dispatch) {
     dispatch(requestData());
