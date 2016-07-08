@@ -22,7 +22,7 @@ access http://localhost:3000/
 
 bundle init
 
-echo "gem 'rails', '5.0.0.beta4', github: 'rails/rails'" >> Gemfile
+echo "gem 'rails', '>= 5.0.0', '< 5.1''" >> Gemfile
 
 bundle install --path vendor/bundle
 
