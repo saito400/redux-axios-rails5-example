@@ -19,6 +19,7 @@ gem 'puma', '~> 3.0'
 # gem 'rack-cors'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth', branch: 'master'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
